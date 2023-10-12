@@ -57,5 +57,29 @@ class Solution(object):
 
         print(len(strs))
 
+'''
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        
+        # will store the sorted value as key and its original strings as values
+        dic = {}
+
+        for i in strs:
+            
+            word = ''.join(sorted(i))
+            
+            # if word is already in dictionary as key
+            # append the original unsorted string to the sub list
+            if word in dic:
+                dic[word].append(i)
+
+            # if word is not in dictionary
+            # create a sub list and add it there
+            else:
+                dic[word] = [i]
+
+        return list(dic.values())
+'''
+
 
 
